@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supabase Pricing Clone</title>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #0f0f0f;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 20px;
+      height: 20px;
+      background-color: #00c46a;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .github {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .btn-signin,
+    .btn-start {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-signin {
+      background-color: #1f1f1f;
+      color: #ccc;
+      border: 1px solid #333;
+    }
+
+    .btn-start {
+      background-color: #00c46a;
+      color: white;
+    }
+
+    .pricing-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #2c2c2c;
+      border-radius: 12px;
+      padding: 32px 24px;
+      width: 280px;
+      position: relative;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .card.featured {
+      border: 2px solid #00c46a;
+    }
+
+    .tag {
+      position: absolute;
+      top: -14px;
+      left: 20px;
+      background-color: #2c2c2c;
+      color: #e1e1e1;
+      font-size: 10px;
+      padding: 4px 8px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      color: #b0b0b0;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      background-color: #00c46a;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .price span {
+      font-weight: normal;
+      font-size: 14px;
+      color: #888;
+    }
+
+    ul {
+      list-style: none;
+      color: #d0d0d0;
+      font-size: 14px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <strong>supabase</strong>
+    </div>
+    <nav>
+      <a href="#">Product</a>
+      <a href="#">Developers</a>
+      <a href="#">Enterprise</a>
+      <a href="#">Pricing</a>
+      <a href="#">Docs</a>
+      <a href="#">Blog</a>
+    </nav>
+    <div class="nav-right">
+      <div class="github">
+        <span>🔗</span>
+        <span>82.8K</span>
+      </div>
+      <button class="btn-signin">Sign in</button>
+      <button class="btn-start">Start your project</button>
+    </div>
+  </header>
+
+  <section class="pricing-wrapper">
+    <!-- FREE Plan -->
+    <div class="card">
+      <h2>FREE</h2>
+      <p class="desc">Perfect for passion projects & simple websites.</p>
+      <button class="btn">Start for Free</button>
+      <div class="price">$0 <span>/ month</span></div>
+      <ul>
+        <li>✔ Unlimited API requests</li>
+        <li>✔ 50,000 monthly active users</li>
+        <li>✔ 500 MB database size</li>
+        <li>✔ 5 GB bandwidth</li>
+        <li>✔ 1 GB file storage</li>
+        <li>✔ Community support</li>
+      </ul>
+    </div>
+
+    <!-- PRO Plan -->
+    <div class="card featured">
+      <div class="tag">Most Popular</div>
+      <h2>PRO</h2>
+      <p class="desc">For production applications with the power to scale.</p>
+      <button class="btn">Get Started</button>
+      <div class="price">$25 <span>/ month</span></div>
+      <ul>
+        <li>✔ 100,000 monthly active users</li>
+        <li>✔ 8 GB disk size per project</li>
+        <li>✔ 250 GB bandwidth</li>
+        <li>✔ 100 GB file storage</li>
+        <li>✔ Email support</li>
+        <li>✔ Daily backups stored for 7 days</li>
+      </ul>
+    </div>
+
+    <!-- TEAM Plan -->
+    <div class="card">
+      <h2>TEAM</h2>
+      <p class="desc">Add features such as SSO, control over backups, and industry certifications.</p>
+      <button class="btn">Get Started</button>
+      <div class="price">$599 <span>/ month</span></div>
+      <ul>
+        <li>✔ SOC2</li>
+        <li>✔ Project-scoped and read-only access</li>
+        <li>✔ HIPAA available as paid add-on</li>
+        <li>✔ SSO for Supabase Dashboard</li>
+        <li>✔ Priority email support &amp; SLAs</li>
+        <li>✔ Daily backups stored for 14 days</li>
+        <li>✔ 28-day log retention</li>
+      </ul>
+    </div>
+
+    <!-- ENTERPRISE Plan -->
+    <div class="card">
+      <h2>ENTERPRISE</h2>
+      <p class="desc">For large-scale applications running Internet scale workloads.</p>
+      <button class="btn">Contact Us</button>
+      <div class="price">Custom</div>
+      <ul>
+        <li>✔ Designated Support manager</li>
+        <li>✔ Uptime SLAs</li>
+        <li>✔ BYO Cloud supported</li>
+        <li>✔ 24×7×365 premium enterprise support</li>
+        <li>✔ Private Slack channel</li>
+        <li>✔ Custom Security Questionnaires</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
